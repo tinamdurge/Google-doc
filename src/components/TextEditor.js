@@ -3,7 +3,7 @@ import  "quill/dist/quill.snow.css" ;
 import React, {useCallback, useEffect, useState} from 'react'
 import { io } from "socket.io-client"
 import { useParams } from "react-router-dom";
-
+import './TextEditor.css'
 const SAVE_INTERVAL_MS = 2000
 const TOOLBAR_OPTIONS = [
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -113,7 +113,41 @@ const TextEditor = () => {
     },[]);
 
     return (
-        <div id="quillContainer" className="container" ref={quillRef}></div>
+        <>
+         <div style={{position:'fixed',zIndex:'500',top:'30%'}} class="barra-redes">
+	<ul class="ul">
+		<li>
+        {/* <i class="fa-brands "></i> */}
+			<a href="javascript:void(0);" target="_blank" title="Facebook" class="links fa-brands fa-google-drive"></a>
+		</li>
+		
+		<li>
+			<a href="javascript:void(0);" target="_blank" title="Twitter" class="links fa-brands fa-google-pay"></a>
+		</li>
+		
+		<li>
+			<a href="javascript:void(0);" target="_blank" title="Instagram" class="links fa-brands fa-google-wallet"></a>
+		</li>
+		
+		<li>
+			<a href="javascript:void(0);" target="_blank" title="Google +" class="links fa-brands fa-google"></a>
+		</li>
+		
+		<li>
+			<a href="javascript:void(0);" target="_blank" title="Email" class="links fa fa-envelope"></a>
+		</li>
+	</ul>
+</div>
+        
+        <div id="quillContainer" className="container" ref={quillRef}>
+
+        
+
+
+        </div>
+        
+       
+        </>
     )
 }
 

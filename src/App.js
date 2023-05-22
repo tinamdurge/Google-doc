@@ -11,6 +11,8 @@ import { v4 as uuidV4 } from "uuid"
 function App() {
   return (
     <BrowserRouter>
+    
+       
       <Routes>
         <Route exact path="/" element ={
           <Navigate to={`/documents/${uuidV4()}`} />
